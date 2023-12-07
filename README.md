@@ -20,5 +20,5 @@
 
 1. Make sure you have a C compiler (e.g., GCC) installed on your machine.
 2. Open a terminal and navigate to the directory containing the file.
-3. Compile the program using `gcc wallet.c`.
+3. Compile the program using `gcc wallet.c main.c`.
 4. Run the program using `./a.out` (on Unix-based systems) or `a.exe` (on Windows).
