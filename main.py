@@ -1,11 +1,7 @@
 class Wallet:
     def __init__(self):
-        self.owner = ""
         self.balance = 0
         self.transactions = []
-
-    def set_owner(self, name):
-        self.owner = name
 
     def add_income(self, amount):
         self.balance += amount
@@ -30,41 +26,31 @@ class Wallet:
 def main():
     wallet = Wallet()
 
-    print("==================")
-    print("What is your name?")
-    print("==================")
-
-    wallet.set_owner(input())
-
     while True:
-        print("===============================")
-        print("Wallet of: " + wallet.owner)
-        print("===============================")
-        print("Total money: " + str(wallet.balance) + " Ariary")
-        print("===============================")
-        print("Select an option:")
-        print("1. Add cash")
-        print("2. Display my money in different currencies")
-        print("3. Spend the money")
-        print("4. View Transaction History")
+        print("\n===== Wallet Management =====")
+        print("1. Add Income")
+        print("2. Add Expense")
+        print("3. Check Balance")
+        print("4. View Transactions")
         print("5. Exit")
-        print("===============================")
 
-        choice = input()
+        choice = input("Enter your choice (1-5): ")
 
         if choice == "1":
             income = float(input("Enter income amount: "))
             wallet.add_income(income)
+            print("Income added successfully!")
 
         elif choice == "2":
-            print(wallet.check_balance())
-
-        elif choice == "3":
             expense = float(input("Enter expense amount: "))
             wallet.add_expense(expense)
+            print("Expense added successfully!")
+
+        elif choice == "3":
+            print(wallet.check_balance())
 
         elif choice == "4":
-            print("===== Transaction History =====")
+            print("\n===== Transaction History =====")
             print(wallet.view_transactions())
 
         elif choice == "5":
@@ -72,7 +58,7 @@ def main():
             break
 
         else:
-            print("Invalid selection. Please choose an option from 1 to 5.")
+            print("Invalid choice. Please enter a number between 1 and 5.")
 
 
 if __name__ == "__main__":
