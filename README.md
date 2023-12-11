@@ -13,12 +13,3 @@
 4. **View Transactions:** Users can view a history of their transactions, including both income and expense entries.
 
 5. **Exit:** Users can exit the wallet management application.
-
-## How to Use
-
-### Java
-
-1. Make sure you have Java installed on your machine.
-2. Open a terminal and navigate to the directory containing the file.
-3. Compile the program using `javac Wallet.java Main.java`.
-4. Run the program using `java Main`.
